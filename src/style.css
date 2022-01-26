@@ -22,7 +22,7 @@ nav {
     right: 0;   
 }
 
-.titulo-secundario {
+.tituloSecundario {
     display: inline;
     margin: 0 0 0 15px;
     letter-spacing: 0.5px;    
@@ -37,6 +37,7 @@ nav p {
 }
 
 main {
+    
     width: 1280px;
     margin: 0 auto;
     padding: 20px;
