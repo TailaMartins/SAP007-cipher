@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+ }
+
 header {
     background: #e1f2f8;
     padding: 20px 0;
@@ -42,4 +46,35 @@ main {
     margin: 0 auto;
     padding: 20px;
 }
+
+form {
+    
+    margin: 40px 0;
+
+}
+
+form label {
+    display:block;
+    font-size:20px;
+    margin: 0 0 10px;
+}
+
+form input {
+    display:block;
+    margin: 0 0 20px;
+    padding: 10 25px;
+    
+}
+form button {
+    display:block;
+    margin: 0 0 20px;
+}
+form textarea {
+    display:block;
+    font-size:20px;
+    margin: 0 0 10px;
+    width: 50%;
+
+}   
+
 

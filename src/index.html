@@ -20,15 +20,40 @@
 
   <main>
     <form>
-      <label for= "mensagemSecreta" class= "mensagemSecreta"> Digite sua mensagem secreta </label>
-      <textarea id= "mensagemSecreta" cols="70" rows="10" placeholder= "Escreva aqui.."></textarea>
+      <div id="codificarMensagem">
+        <label for="mensagemSecreta"> Digite sua mensagem secreta </label>
+        <textarea id="mensagemSecreta" cols="30" rows="10" placeholder="Escreva aqui.."></textarea>
 
-        <div id="descolamento">
-          <label for="posicoesDeslocamento" class="posicoesDeslocamento">Escolha a posição do seu deslocamento</label>
-          <input type= "number" id="posicoesDeslocamento" value= "  " min= "1" max= "26">
-          <input type= "submit" class= "enviar" value= "enviar">
-        </div>
+
+        <label for="offset">Escolha sua cifra</label>
+        <input type="number" id="posicoesDeslocamento" value="  " min="1" max="26">
+        <button id="codiMensagem">Codificar Mensagem </button>
+      </div>
+
+      <div id="resultadoEncode">
+        <label for=" mensagemCifrada"> Sua mensagem cifrada é: </label>
+        <textarea name="mesagemCifrada" id="mensagemCifrada" cols="30" rows="10"></textarea>
+      </div>
+
+      <div id="descodificarMensagem">
+        <label for="mensCodificada">Digite a mensagem Codificada</label>
+        <textarea id="mensagemCodificada" cols="30" rowns="10" placeholder="Escreva aqui.."></textarea>
+
+
+        <label for="offset">Escolha sua cifra</label> 
+        <input type="number" id="inverterDeslocamento" value="  " min="1" max="26">
+        <button id="descodiMensagem"> Descodificar Mensagem </button>
+
+
+      </div>
+
+      <div id="retornoDecode">
+        <label for=" mensagemDescifrada"> Sua mensagem cifrada é: </label>
+        <textarea name="mesagemDescifrada" id="mensagemDescifrada" cols="30" rows="10"></textarea>
+      </div>
+
     </form>
+
 
   </main>
   <script src="index.js" type="module"></script>
