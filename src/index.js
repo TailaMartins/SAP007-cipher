@@ -1,7 +1,7 @@
 
 import cipher from "./cipher.js";
 
-console.log(cipher);
+//console.log(cipher);
 
 const botaoCodificar = document.getElementById("codiMensagem");
 function codMensagem(evt) {
