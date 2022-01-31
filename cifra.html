@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cifra de Cesar</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="caixa">
+            <h1><img class="imagem-cifra" src="cifra-2.png" alt="imagem da cifra"></h1>
+            <nav>
+                <ul class="sites">
+                    <li><a href="cifra.html">Cifra</a></li>
+                    <li><a href="https://github.com/TailaMartins"> Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/taila-martins-b00a54148">Linkedin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <img class="cifraexemplo" src="cifraexemplo.png" alt="cifra exemplo">
+    <main>
+        <section class="textoPrincipal">
+            <h2 class="tituloCentralizado">Sobre a cifra de Cesar</h2>
+            <img class="imagemjuliocesar" src="juliocesar.jpg" alt="imagem de Julio Cesar">
+            <p>Trata-se de um tipo de cifra de substituição, na qual cada letra de um texto a ser criptografado é
+                substituída por outra letra,
+                presente no alfabeto porém deslocada um certo número de posições à esquerda ou à direita.</p>
+
+            <p>Por exemplo, se usarmos uma troca de quatro posições à esquerda, cada letra é substituída pela letra que
+                está quatro posições adiante no alfabeto,
+                e nesse caso a letra A seria substituída pela letra E, B por F, C por G, e assim sucessivamente.</p>
+
+            <p>A cifra de César recebe esse nome pois, segundo o escritor Suetônio, foi utilizada por Júlio César para
+                se comunicar com seus generais,
+                protegendo mensagens militares.</p>
+
+            <p>Essa cifra é uma cifra de substituição monoalfabética, o que significa que cada letra do texto plano é
+                substituída por uma outra letra do alfabeto
+                no texto criptografado (cifrado), de forma constante (sempre as mesmas letras são utilizadas). Por conta
+                disso,
+                ela acaba sendo extremamente simples de ser decifradas.</p>
+
+            <p>Como o texto cifrado acaba tendo exatamente o mesmo número de caracteres do texto plano,
+                também classificamos a <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar">cifra de césar
+                </a>como Monogrâmica, sendo então classificada mais corretamente como
+                Cifra de Substituição Monoalfabética Monogrâmica.</p>
+
+            <p><strong>Exemplo:</strong></p>
+            <p>Cifra de César com alfabeto com rotação à esquerda de quatro posições:</p>
+
+            <p><em>Alfabeto Normal: ABCDEFGHIJKLMNOPQRSTUVWXYZ</em></p>
+            <p><em> Cifrado: EFGHIJKLMNOPQRSTUVWXYZABCD</em></p>
+
+            <p>Vamos criptografar uma mensagem simplesmente trocando cada letra da mensagem presente no alfabeto normal
+                pela sua equivalente no alfabeto cifrado.
+                A descriptografia é justamento o processo inverso:</p>
+
+            <p><em> em texto plano: Vamos aprender Criptografia</em></p>
+            <p><em>criptografada: ZEQSW ETVIRHIV GVMTXSKVEJME</em> </p>
+        </section>
+        <section class="textoPrincipal">
+            <h3 class="tituloCentralizado">Mensagem Secreta</h3>
+            <p>Assista o video e entenda a logica usada na nossa pagina para criar a sua <a href="index.html">mensagem
+                    secreta</a>.</p>
+            <div clas="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/utiLWBXmNQU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
+    <p class="copyright"> &copy Copyright Laboratoria - Projeto Cypher - 2022</p>
+</footer>
+</html>
