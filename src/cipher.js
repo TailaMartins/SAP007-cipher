@@ -1,19 +1,41 @@
-const cipher = {                                                                                          /* Isso é um objeto, pois nele tem propriedades e definiçoes   */
-    encode(offset, string) {                                                                             /* essa é a função que recebe string e o offset */
-        if (typeof offset != 'number' || (offset != 0 && offset % 1 != 0)) {                             /* aqui vai dar erro se o usuario usar outro tipo de argumento que não seja do tipo number no offset */
-            throw new TypeError();                                                                     /* aqui o erro porem deixei vazio, entaõ não vai dar nenhuma mensagem de erro, porem vai dar erro */
+/*conts cipher é um objeto pois tem propriedades e definições*/
+const cipher = {
+    encode(offset, string) {
+        /*encode é a função que recebe um offset e uma string*/
+        if (typeof offset != 'number' || (offset != 0 && offset % 1 != 0)) {
+            /*if é uma condição; tyeof é o tipo ; !=0 é um operador logico de negação */
+            throw new TypeError();
+            /*throw ele tipo joga um erro*/
         }
-        if (typeof string != 'string') {                                                            /* aqui tambem é pra dar erro se usuario colocar outro tipo de argumento */
-            throw new TypeError();                                                                  /* aqui é o erro que também está vazio*/
+        if (typeof string != 'string') {
+            throw new TypeError();
+            /*é onde vai dar erro,()deixei vazio pois não me senti segura de escrever o erro*/
         }
 
-        let mensagemSecreta = "";                                                              /* aqui é a minha variavel */
-        for (let i = 0; i < string.length; i++) {                                             /* aqui é o meu laço for */
-            const quantidaDeletras = string[i];                                                       /* aqui e o meu for com uma const que recebe minha string o[i] é oindice da minha const que vai ser verificado */
+        let mensagemSecreta = "";
+        for (let i = 0; i < string.length; i++) {
+            const quantidaDeletras = string[i];
             let codDaletraaASC = quantidaDeletras.charCodeAt(0);
+            /*laço for que contem um contador e função* que vai verficar o que o usuario escrever e transformar em numeraçao ASC*/
 
-            if (codDaletraaASC >= 65 && codDaletraaASC <= 90) {
+            if (codDaletraaASC >= 32 && codDaletraaASC <= 48) {
+                /*condição e as regras de intruções*/
+                let retornoEncode = ((codDaletraaASC - 32 + offset) % 26 + 32);
+                let novaLetra = String.fromCharCode(retornoEncode);
+                mensagemSecreta = mensagemSecreta + novaLetra;
+
+            } else if (codDaletraaASC >= 58 && codDaletraaASC <= 64) {
+                let retornoEncode = ((codDaletraaASC - 58 + offset) % 26 + 58);
+                let novaLetra = String.fromCharCode(retornoEncode);
+                mensagemSecreta = mensagemSecreta + novaLetra;
+
+            } else if (codDaletraaASC >= 65 && codDaletraaASC <= 90) {
                 let retornoEncode = ((codDaletraaASC - 65 + offset) % 26 + 65);
+                let novaLetra = String.fromCharCode(retornoEncode);
+                mensagemSecreta = mensagemSecreta + novaLetra;
+
+            } else if (codDaletraaASC >= 91 && codDaletraaASC <= 96) {
+                let retornoEncode = ((codDaletraaASC - 91 + offset) % 26 + 91);
                 let novaLetra = String.fromCharCode(retornoEncode);
                 mensagemSecreta = mensagemSecreta + novaLetra;
 
@@ -22,24 +44,11 @@ const cipher = {                                                                
                 let novaLetra = String.fromCharCode(retornoEncode);
                 mensagemSecreta = mensagemSecreta + novaLetra;
 
-            } else if (codDaletraaASC >= 32 && codDaletraaASC <= 47) {
-                let retornoEncode = ((codDaletraaASC - 32 + offset) % 26 + 32);
-                let novaLetra = String.fromCharCode(retornoEncode);
-                mensagemSecreta = mensagemSecreta + novaLetra;
-
-            } else if(codDaletraaASC >= 58 && codDaletraaASC <= 64) {
-                let retornoEncode = ((codDaletraaASC - 58 + offset) % 26 + 64);
-                let novaLetra = String.fromCharCode(retornoEncode);
-                mensagemSecreta = mensagemSecreta + novaLetra;
-
-                
             } else if (codDaletraaASC >= 123 && codDaletraaASC <= 254) {
                 let retornoEncode = ((codDaletraaASC - 123 + offset) % 26 + 123);
                 let novaLetra = String.fromCharCode(retornoEncode);
                 mensagemSecreta = mensagemSecreta + novaLetra;
 
-            } else{
-                alert("Digite sua mensagem");
             }
         }
         return mensagemSecreta;
@@ -51,14 +60,28 @@ const cipher = {                                                                
         if (typeof string != 'string') {
             throw new TypeError();
         }
-
         let mensagemCodificada = "";
         for (let i = 0; i < string.length; i++) {
             const quantidaDeletras = string[i];
             let codDaletraaASC = quantidaDeletras.charCodeAt(0);
 
-            if (codDaletraaASC >= 65 && codDaletraaASC <= 90) {
+            if (codDaletraaASC >= 32 && codDaletraaASC <= 48) {
+                let retornoDecode = ((codDaletraaASC - 48 - offset) % 26 + 48);
+                let novaLetra = String.fromCharCode(retornoDecode);
+                mensagemCodificada = mensagemCodificada + novaLetra;
+
+            } else if (codDaletraaASC >= 58 && codDaletraaASC <= 64) {
+                let retornoDecode = ((codDaletraaASC - 64 - offset) % 26 + 64);
+                let novaLetra = String.fromCharCode(retornoDecode);
+                mensagemCodificada = mensagemCodificada + novaLetra;
+
+            } else if (codDaletraaASC >= 65 && codDaletraaASC <= 90) {
                 let retornoDecode = ((codDaletraaASC - 90 - offset) % 26 + 90);
+                let novaLetra = String.fromCharCode(retornoDecode);
+                mensagemCodificada = mensagemCodificada + novaLetra;
+
+            } else if (codDaletraaASC >= 91 && codDaletraaASC <= 96) {
+                let retornoDecode = ((codDaletraaASC - 96 - offset) % 26 + 96);
                 let novaLetra = String.fromCharCode(retornoDecode);
                 mensagemCodificada = mensagemCodificada + novaLetra;
 
@@ -67,24 +90,11 @@ const cipher = {                                                                
                 let novaLetra = String.fromCharCode(retornoDecode);
                 mensagemCodificada = mensagemCodificada + novaLetra;
 
-            } else if (codDaletraaASC >= 32 && codDaletraaASC <= 47) {
-                let retornoDecode = ((codDaletraaASC - 47 - offset) % 26 + 47);
-                let novaLetra = String.fromCharCode(retornoDecode);
-                mensagemCodificada = mensagemCodificada + novaLetra;
-
-            } else if(codDaletraaASC >= 58 && codDaletraaASC <= 64){
-                let retornoDecode = ((codDaletraaASC - 64 - offset) % 26 + 64);
-                let novaLetra = String.fromCharCode(retornoDecode);
-                mensagemCodificada = mensagemCodificada + novaLetra;
-
-            } else if (codDaletraaASC >=123 && codDaletraaASC <= 254) {
+            } else if (codDaletraaASC >= 123 && codDaletraaASC <= 254) {
                 let retornoDecode = ((codDaletraaASC - 254 - offset) % 26 + 254);
                 let novaLetra = String.fromCharCode(retornoDecode);
                 mensagemCodificada = mensagemCodificada + novaLetra;
-
-            } else{
-                alert("Digite sua mensagem !!!")
-            }               
+            }
         }
         return mensagemCodificada;
     }
