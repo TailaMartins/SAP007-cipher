@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- "width=device-width" define a largura da página para seguir a largura da tela do dispositivo
+  que varia de acordo com o dispositivo e a tag meta e a janela de visualização  -->
   <title>Caesar Cipher</title>
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header>
     <div class="caixa">
@@ -21,39 +26,51 @@
     </div>
   </header>
   <main>
-    <h2></h2>
-    <form class="formulario">
-      <fieldset id="codificarMensagem">
-        <label for="mensagemSecreta"> Digite sua mensagem secreta </label>
-        <textarea id="mensagemSecreta" cols="30" rows="10" placeholder="Escreva aqui.."></textarea>
-        <label for="offset">Chave de deslocamento</label>
-        <input type="number" id="posicoesDeslocamento" value="  " min="1" max="26">
-        <button id="codiMensagem" class="botao">Codificar Mensagem </button>
-      </fieldset>
-
-      <fieldset id="resultadoEncode">
-        <label for=" mensagemCifrada"> Sua mensagem cifrada é: </label>
-        <textarea name="mesagemCifrada" id="mensagemCifrada" cols="30" rows="10"></textarea>
-      </fieldset>
-
-      <fieldset id="descodificarMensagem">
-        <label for="mensCodificada">Digite a mensagem Codificada</label>
-        <textarea id="mensagemCodificada" cols="30" rowns="10" placeholder="Escreva aqui.." ></textarea>
-        <label for="offset">Chave de deslocamento</label>
-        <input type="number" id="inverterDeslocamento" value="  " min="1" max="26">
-        <button id="descodiMensagem" class="botao"> Descodificar Mensagem </button>
-      </fieldset>
-
-      <fieldset id="retornoDecode">
-        <label for=" mensagemDescifrada"> Sua mensagem cifrada é: </label>
-        <textarea name="mesagemDescifrada" id="mensagemDescifrada" cols="30" rows="10"></textarea>
-      </fieldset>
-
-    </form>
+    <section>
+      <div class="containerPrincipal">
+        <form>
+          <!-- Codificar -->
+          <div class="containerCodificar">
+            <label class="tituloPrincipal">Criptografar</label>
+            <textarea id="mensagemSecreta" class="mensagem" cols="30" rows="10"
+              placeholder="Digite sua mensagem aqui..."></textarea>
+            <div class="offset">
+              <label class="texto">Deslocamento</label>
+              <input type="number" id="posiçoesDeslocamento" class="deslocamento" value=" " min="1" max="26">
+              <button id="codiMensagem" class="botao">Criptografar</button>
+            </div>
+            <!-- Retorno encode -->
+            <div class="retornoEncode">
+              <textarea id="mensagemCifrada" class="mensagem" cols="30" rows="10"
+                placeholder="Sua mensagem será exibida..."></textarea>
+            </div>
+          </div>
+          <!-- Descodificar -->
+          <div class="containerDescodificar">
+            <label class="tituloPrincipal">Descriptografar</label>
+            <textarea id="mensagemCodificada" class="mensagem" cols="30" rows="10"
+              placeholder="Digite sua mensagem aqui..."></textarea>
+            <div class="offset">
+              <label class="texto">Deslocamento</label>
+              <input id="inverterDeslocamento" class="deslocamento" type="number" min="1" max="26">
+              <button id="descodiMensagem" class="botao">Descriptografar</button>
+            </div>
+            <!-- Retorno Decode -->
+            <div class="retornoDecode">
+              <textarea id="mensagemDescifrada" class="mensagem" cols="30" rows="10"
+                placeholder="Sua mensagem será exibida..." required></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
   <script src="index.js" type="module"></script>
+  <footer>
+    <div clas="containerRodape">
+    <p class="copyright"> &copy Copyright Laboratoria - Projeto Cypher - 2022</p>
+    </div>
+  </footer>
 </body>
-<footer>
-  <p class="copyright"> &copy Copyright Laboratoria - Projeto Cypher - 2022</p>
-</footer>
+
 </html>
