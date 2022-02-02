@@ -13,7 +13,7 @@
   - [🛠️ Tecnologias](#️-tecnologias)
     - [🙋‍♀️ Autor](#️-autor)
   
----
+***
 
 ## 🖥️ Sobre o projeto
 
