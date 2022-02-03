@@ -17,7 +17,7 @@
 
 ## 🖥️ Sobre o projeto
 
-a cifra de César é de um tipo de cifra de substituição, na qual cada letra de um texto a ser criptografado é substituída por outra letra,
+A cifra de César é de um tipo de cifra de substituição, na qual cada letra de um texto a ser criptografado é substituída por outra letra,
 presente no alfabeto porém deslocada um certo número de posições à esquerda ou à direita.
 Por exemplo: Se usarmos um deslocamento a esquerda(offset) de 8 posicoes:
 
