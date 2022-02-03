@@ -46,7 +46,7 @@ Para a construção do prototipo e o planning do projeto as seguintes ferramneta
   
 
 ## 🚀 Status do Projeto
- 🚧 Quase lá 🎉
+ ✅ Concluido 🎉
 
 ## 🛠️ Tecnologias
 As seguintes ferramentas foram ultilizadas na construção desse projeto
