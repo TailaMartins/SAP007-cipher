@@ -108,7 +108,7 @@ footer {
     
 }
 .copyright {
-    color: #FFFFFF;
+    color: #f0be53ee;
     font-size: 13px;
 }
 /*pagina cifra.html*/
@@ -152,21 +152,20 @@ footer {
     margin: 2em auto;
 }
 @media screen and (max-width: 480px) {
-    .caixa, .textoprincipal, .formulario, .video {
+    .caixa, .textoprincipal, .form {
         width: auto;
     }
-
+    .main {
+        display: inline;
+    }
     body {
         text-align: center;
     }
-
     nav {
-        position: static;
-    
+        position: static;    
     }
     .sites {
         text-align: center;
-
-    }
+    }    
 
 }
