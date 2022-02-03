@@ -2,7 +2,7 @@
 import cipher from "./cipher.js";
 
 //console.log(cipher);
-
+//variavel do botao para codificar 
 const botaoCodificar = document.getElementById("codiMensagem");
 function codMensagem(evt) {
     evt.preventDefault();
