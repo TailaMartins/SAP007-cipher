@@ -1,4 +1,4 @@
-/*conts cipher é um objeto pois tem propriedades e definições*/
+/*const cipher é um objeto pois tem propriedades e definições*/
 const cipher = {
     encode(offset, string) {
         /*encode é a função que recebe um offset e uma string*/
@@ -11,11 +11,10 @@ const cipher = {
             throw new TypeError();
             /*é onde vai dar erro,()deixei vazio pois não me senti segura de escrever o erro*/
         }
-
         let mensagemSecreta = "";
         for (let i = 0; i < string.length; i++) {
             const quantidaDeletras = string[i];
-            let codDaletraaASC = quantidaDeletras.codePointAt(0);
+            let codDaletraaASC = quantidaDeletras.charCodeAt(0);
             /*laço for que contem um contador e função* que vai verficar o que o usuario escreve e transformar em numeraçao ASC*/
 
             if (codDaletraaASC >= 65 && codDaletraaASC <= 90) {
