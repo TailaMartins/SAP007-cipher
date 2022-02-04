@@ -37,7 +37,7 @@ Qualquer pessoa que sinta a necessidade de escrever um texto codificado e quiser
 assim como o texto a ser cifrado.
 
 ### 📆 Prototipo e planejamento
-Para a construção do prototipo e o planning do projeto as seguintes ferramnetas foram ultilizadas 
+Para a construção do prototipo e o planning do projeto as seguintes ferramentas foram ultilizadas 
  - [Mockflow](https://wireframepro.mockflow.com/#/space/Me2J3mzlonb) 
  - [Trello](https://trello.com/b/68hPbmTu/cipher)
   
