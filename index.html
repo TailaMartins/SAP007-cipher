@@ -4,8 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <!-- "width=device-width" define a largura da página para seguir a largura da tela do dispositivo
-  que varia de acordo com o dispositivo e a tag meta e a janela de visualização  -->
   <title>Caesar Cipher</title>
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="stylesheet" href="reset.css" />
@@ -18,9 +16,9 @@
       <h1><img class="imagem-cifra" src="cifra-2.png" alt="imagem da cifra"></h1>
       <nav>
         <ul class="sites">
-          <li><a href="cifra.html">Cifra</a></li>
-          <li><a href="https://github.com/TailaMartins"> Github</a></li>
-          <li><a href="https://www.linkedin.com/in/taila-martins-b00a54148">Linkedin</a></li>
+          <li><a href="cifra.html" target="_blank">Cifra</a></li>
+          <li><a href="https://github.com/TailaMartins" target="_blank"> Github</a></li>
+          <li><a href="https://www.linkedin.com/in/taila-martins-b00a54148" target="_blank">Linkedin</a></li>
         </ul>
       </nav>
     </div>
@@ -29,7 +27,7 @@
     <section>
       <div class="containerPrincipal">
         <form>
-          <!-- Codificar -->
+        
           <div class="containerCodificar">
             <label class="tituloPrincipal">Criptografar</label>
             <textarea id="mensagemSecreta" class="mensagem" cols="30" rows="10"
@@ -39,13 +37,13 @@
               <input type="number" id="posiçoesDeslocamento" class="deslocamento" value=" " min="1" max="26">
               <button id="codiMensagem" class="botao">Criptografar</button>
             </div>
-            <!-- Retorno encode -->
+          
             <div class="retornoEncode">
               <textarea id="mensagemCifrada" class="mensagem" cols="30" rows="10"
                 placeholder="Sua mensagem será exibida..."></textarea>
             </div>
           </div>
-          <!-- Descodificar -->
+        
           <div class="containerDescodificar">
             <label class="tituloPrincipal">Descriptografar</label>
             <textarea id="mensagemCodificada" class="mensagem" cols="30" rows="10"
@@ -55,7 +53,7 @@
               <input id="inverterDeslocamento" class="deslocamento" type="number" min="1" max="26">
               <button id="descodiMensagem" class="botao">Descriptografar</button>
             </div>
-            <!-- Retorno Decode -->
+            
             <div class="retornoDecode">
               <textarea id="mensagemDescifrada" class="mensagem" cols="30" rows="10"
                 placeholder="Sua mensagem será exibida..." required></textarea>
