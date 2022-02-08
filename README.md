@@ -29,7 +29,7 @@ A letra A será: I
 
 A palavra gato será: OIBW
 
-O projeto foi desenvolvido durante o bootcamp da [Laboratoria](https://www.laboratoria.la/br target="_blank")
+O projeto foi desenvolvido durante o bootcamp da [Laboratoria](https://www.laboratoria.la/br)
 
 ## 👥 Ux (User experience)
 ### Perfil do usuario
