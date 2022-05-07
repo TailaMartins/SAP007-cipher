@@ -1,73 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Caesar Cipher</title>
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header>
-    <div class="caixa">
-      <h1><img class="imagem-cifra" src="cifra-2.png" alt="imagem da cifra"></h1>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Caesar Cipher</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1>
+        <img
+          class="imagem-cifra"
+          src="./assets/cifra-2.png"
+          alt="imagem da cifra"
+        />
+      </h1>
       <nav>
         <ul class="sites">
-          <li><a href="cifra.html" target="_blank">Cifra</a></li>
-          <li><a href="https://github.com/TailaMartins" target="_blank"> Github</a></li>
-          <li><a href="https://www.linkedin.com/in/taila-martins-b00a54148" target="_blank">Linkedin</a></li>
+          <li><a href="./pages/cifra.html">Cifra</a></li>
+          <li>
+            <a href="https://github.com/TailaMartins" target="_blank">
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/taila-martins-b00a54148"
+              target="_blank"
+              >Linkedin
+            </a>
+          </li>
         </ul>
       </nav>
-    </div>
-  </header>
-  <main>
-    <section>
-      <div class="containerPrincipal">
-        <form>
-        
-          <div class="containerCodificar">
-            <label class="tituloPrincipal">Criptografar</label>
-            <textarea id="mensagemSecreta" class="mensagem" cols="30" rows="10"
-              placeholder="Digite sua mensagem aqui..."></textarea>
-            <div class="offset">
-              <label class="texto">Deslocamento</label>
-              <input type="number" id="posiçoesDeslocamento" class="deslocamento" value=" " min="1" max="26">
-              <button id="codiMensagem" class="botao">Criptografar</button>
-            </div>
-          
-            <div class="retornoEncode">
-              <textarea id="mensagemCifrada" class="mensagem" cols="30" rows="10"
-                placeholder="Sua mensagem será exibida..."></textarea>
-            </div>
-          </div>
-        
-          <div class="containerDescodificar">
-            <label class="tituloPrincipal">Descriptografar</label>
-            <textarea id="mensagemCodificada" class="mensagem" cols="30" rows="10"
-              placeholder="Digite sua mensagem aqui..."></textarea>
-            <div class="offset">
-              <label class="texto">Deslocamento</label>
-              <input id="inverterDeslocamento" class="deslocamento" type="number" min="1" max="26">
-              <button id="descodiMensagem" class="botao">Descriptografar</button>
-            </div>
-            
-            <div class="retornoDecode">
-              <textarea id="mensagemDescifrada" class="mensagem" cols="30" rows="10"
-                placeholder="Sua mensagem será exibida..." required></textarea>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-  <script src="index.js" type="module"></script>
-  <footer>
-    <div clas="containerRodape">
-    <p class="copyright"> &copy Copyright Laboratoria - Projeto Cypher - 2022</p>
-    </div>
-  </footer>
-</body>
+    </header>
+    <main>
+      <section class="container-principal">
+        <aside>
+          <label class="titulo-principal">Criptografar</label>
+          <textarea
+            id="mensagem-secreta"
+            class="mensagem"
+            cols="30"
+            rows="10"
+            placeholder="Digite sua mensagem aqui..."
+            required
+          >
+          </textarea>
+        </aside>
+
+        <aside class="offset">
+          <label class="texto">Deslocamento</label>
+          <input
+            type="number"
+            id="posicoes-deslocamento"
+            class="deslocamento"
+            value=" "
+            min="1"
+            max="26"
+            required
+          />
+          <button id="codi-mensagem" class="botao">Criptografar</button>
+        </aside>
+
+        <aside class="retorno-encode">
+          <label class="titulo-principal">Mensagem Criptografada</label>
+          <textarea
+            id="mensagem-cifrada"
+            class="mensagem"
+            cols="30"
+            rows="10"
+            placeholder="Sua mensagem será exibida aqui.."
+          >
+          </textarea>
+        </aside>
+
+        <aside class="container-descodificar">
+          <label class="titulo-principal">Descriptografar</label>
+          <textarea
+            id="mensagem-codificada"
+            class="mensagem"
+            cols="30"
+            rows="10"
+            placeholder="Digite sua mensagem aqui..."
+            required
+          >
+          </textarea>
+        </aside>
+
+        <aside class="offset">
+          <label class="texto">Deslocamento</label>
+          <input
+            id="inverter-deslocamento"
+            class="deslocamento"
+            type="number"
+            min="1"
+            max="26"
+            required
+          />
+          <button id="descodi-mensagem" class="botao">Descriptografar</button>
+        </aside>
+
+        <aside class="retorno-decode">
+          <label class="titulo-principal">Mensagem Descriptografada</label>
+          <textarea
+            id="mensagem-descifrada"
+            class="mensagem"
+            cols="30"
+            rows="10"
+            placeholder="Sua mensagem será exibida aqui.."
+            required
+          >
+          </textarea>
+        </aside>
+        <aside class="botao-limpar">
+          <button id="limpar" class="limpar">Limpar campos</button>
+        </aside>
+      </section>
+    </main>
+    <footer class="rodape">
+      <p class="copyright">
+        &copy Copyright Laboratoria - Projeto Cypher - 2022
+      </p>
+    </footer>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>

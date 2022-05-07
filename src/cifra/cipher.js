@@ -1,3 +1,9 @@
+const tamanhodoAlfabeto = 26;
+const letraAmaiscula = 65;
+const letraZmaiscula = 90;
+const letraAminuscula = 97;
+const letraZminuscula = 122;
+
 const cipher = {
     encode(offset, string) {
         if (typeof offset != 'number' || (offset != 0 && offset % 1 != 0)) {
@@ -14,16 +20,16 @@ const cipher = {
             if (codDaletraaASC >= letraAmaiscula && codDaletraaASC <= letraZmaiscula) {
                 const retornoEncode = ((codDaletraaASC - letraAmaiscula + offset) % tamanhodoAlfabeto + letraAmaiscula);
                 const novaLetra = String.fromCharCode(retornoEncode);
-                mensagemSecreta = mensagemSecreta + novaLetra;
+                mensagemSecreta += novaLetra;
 
             } else if (codDaletraaASC >= letraAminuscula && codDaletraaASC <= letraZminuscula) {
                 const retornoEncode = ((codDaletraaASC - letraAminuscula + offset) % tamanhodoAlfabeto + letraAminuscula);
                 const novaLetra = String.fromCharCode(retornoEncode);
-                mensagemSecreta = mensagemSecreta + novaLetra;
+                mensagemSecreta +=  novaLetra;
 
             } else {
                 const novaLetra = String.fromCharCode(codDaletraaASC);
-                mensagemSecreta = mensagemSecreta + novaLetra;
+                mensagemSecreta += novaLetra;
             }
         }
         return mensagemSecreta;
@@ -60,9 +66,5 @@ const cipher = {
 }
 export default cipher;
 
-const letraAmaiscula = 65;
-const letraZmaiscula = 90;
-const tamanhodoAlfabeto = 26;
-const letraAminuscula = 97;
-const letraZminuscula = 122;
+
 
