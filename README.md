@@ -60,6 +60,6 @@ As seguintes ferramentas foram ultilizadas na construção desse projeto
 
 ### 🙋‍♀️ Autor
 ***
-[Taila Martins](https://github.com/TailaMartins)
+[Taila Martins](https://www.linkedin.com/in/taila-martins/)
 
 
