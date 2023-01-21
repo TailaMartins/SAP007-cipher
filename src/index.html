@@ -1,129 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Caesar Cipher</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="cabecalho">
-      <h1>
-        <img
-          class="imagem-cifra"
-          src="./assets/cifra-2.png"
-          alt="imagem da cifra"
-        />
-      </h1>
-      <nav>
-        <ul class="sites">
-          <li><a href="./pages/cifra.html">Cifra</a></li>
-          <li>
-            <a href="https://github.com/TailaMartins" target="_blank">
-              Github
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/taila-martins-b00a54148"
-              target="_blank"
-              >Linkedin
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="container-principal">
-        <aside>
-          <label class="titulo-principal">Criptografar</label>
-          <textarea
-            id="mensagem-secreta"
-            class="mensagem"
-            cols="30"
-            rows="10"
-            placeholder="Digite sua mensagem aqui..."
-            required
-          >
-          </textarea>
-        </aside>
 
-        <aside class="offset">
-          <label class="texto">Deslocamento</label>
-          <input
-            type="number"
-            id="posicoes-deslocamento"
-            class="deslocamento"
-            value=" "
-            min="1"
-            max="26"
-            required
-          />
-          <button id="codi-mensagem" class="botao">Criptografar</button>
-        </aside>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="A cifra de cesar é umas das mais simples tecnicas de criptografia">
+  <title>Cifra de César</title>
+  <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Turret+Road:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
-        <aside class="retorno-encode">
-          <label class="titulo-principal">Mensagem Criptografada</label>
-          <textarea
-            id="mensagem-cifrada"
-            class="mensagem"
-            cols="30"
-            rows="10"
-            placeholder="Sua mensagem será exibida aqui.."
-          >
-          </textarea>
-        </aside>
+<body>
+  <header class="header">
+    <a href="https://github.com/TailaMartins/SAP007-cipher" target="_blank"><img src="./assets/logo.svg" alt="nome cesar" width="230" height="51"></a>
 
-        <aside class="container-descodificar">
-          <label class="titulo-principal">Descriptografar</label>
-          <textarea
-            id="mensagem-codificada"
-            class="mensagem"
-            cols="30"
-            rows="10"
-            placeholder="Digite sua mensagem aqui..."
-            required
-          >
-          </textarea>
-        </aside>
-
-        <aside class="offset">
-          <label class="texto">Deslocamento</label>
-          <input
-            id="inverter-deslocamento"
-            class="deslocamento"
-            type="number"
-            min="1"
-            max="26"
-            required
-          />
-          <button id="descodi-mensagem" class="botao">Descriptografar</button>
-        </aside>
-
-        <aside class="retorno-decode">
-          <label class="titulo-principal">Mensagem Descriptografada</label>
-          <textarea
-            id="mensagem-descifrada"
-            class="mensagem"
-            cols="30"
-            rows="10"
-            placeholder="Sua mensagem será exibida aqui.."
-            required
-          >
-          </textarea>
-        </aside>
-        <aside class="botao-limpar">
-          <button id="limpar" class="limpar">Limpar campos</button>
-        </aside>
-      </section>
-    </main>
-    <footer class="rodape">
-      <p class="copyright">
-        &copy Copyright Laboratoria - Projeto Cypher - 2022
+    <nav>
+      <ul class="header-menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#cifrar">Cifrar</a></li>
+        <li><a href="#decifrar">Decifrar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="container sobre" id="sobre">
+    <img src="./assets/perfil-cesar.jpg" alt="imagem de Julio Cesar" width="357" height="500">
+    <div>
+      <h1>cifra de <br>céasar</h1>
+      <p>É umas das mais simples tecnicas de criptografia</br>
+        Para saber mais clique <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">aqui</a>.
       </p>
-    </footer>
-    <script src="index.js" type="module"></script>
-  </body>
+    </div>
+  </section>
+  <main id="cifrar" class="cifrar">
+    <div class="container container-cifrar">
+      <div>
+        <div class="container-offset">
+          <label class="container-texto">Escolha seu deslocamento:</label>
+          <select>
+            <option>Offset</option>
+            <option>1</option>
+          </select>
+        </div>
+        <label class="container-texto">Mensagem:</label>
+        <textarea class="container-mensagem" required></textarea>
+        <textarea class="container-mensagem" readonly></textarea>
+      </div>
+      <div class="container-button">
+        <button class="button">Cifrar</button>
+      </div>
+    </div>
+  </main>
+  <section id="decifrar" class="decifrar">
+    <div class="container container-decifrar">
+      <div>
+        <div class="container-offset">
+          <label class="container-texto">Escolha seu deslocamento:</label>
+          <select>
+            <option>Offset</option>
+            <option>1</option>
+          </select>
+        </div>
+        <label class="container-texto">Mensagem:</label>
+        <textarea class="container-mensagem" required></textarea>
+        <textarea class="container-mensagem" readonly></textarea>
+      </div>
+      <div class="descifrar-button">
+        <button class="button-descifrar">Descifrar</button>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>Desenvolvido por: <a href="https://www.linkedin.com/in/taila-martins/" target="_blank">Taila Martins</a></p>
+  </footer>
+  <script src="./index.js" type="module"></script>
+</body>
+
 </html>

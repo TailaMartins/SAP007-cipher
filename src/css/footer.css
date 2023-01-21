@@ -1,0 +1,16 @@
+.footer {
+  background-color: #000000;
+  position: relative;
+}
+
+.footer p {
+  color: #666666;
+  font-size: 0.875rem;
+  position: absolute;
+  top: -80px;
+  right: 50px;
+}
+
+.footer a {
+  color: #666666;
+}

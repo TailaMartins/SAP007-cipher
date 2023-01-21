@@ -1,0 +1,17 @@
+.decifrar {
+  background-color: #000000;
+}
+
+.container-decifrar {
+  row-gap: 0;
+  padding: 120px 20px;
+}
+
+.container-decifrar .descifrar-button {
+  grid-column: 1;
+}
+
+.button-descifrar {
+  padding: 15px 20px;
+  font-size: 1rem;
+}
