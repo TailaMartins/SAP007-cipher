@@ -1,0 +1,18 @@
+.sobre {
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.sobre h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  font-weight: bold;
+  font-family: "Turret Road", cursive;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.sobre a {
+  color: #f99c1b;
+  text-decoration: none;
+}
