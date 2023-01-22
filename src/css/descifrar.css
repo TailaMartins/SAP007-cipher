@@ -7,11 +7,18 @@
   padding: 120px 20px;
 }
 
-.container-decifrar .descifrar-button {
+.container-decifrar .decifrar-button {
   grid-column: 1;
 }
 
-.button-descifrar {
+.button-decifrar {
   padding: 15px 20px;
   font-size: 1rem;
+}
+
+.mensagem-de-erro-decifrar {
+  color: #ff6347;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  padding-top: 20px;
 }
