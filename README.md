@@ -45,7 +45,7 @@ Para a construção do prototipo e o planning do projeto as seguintes ferramenta
 - [Mockflow](https://wireframepro.mockflow.com/editor.jsp?editor=off&publicid=Mf76dde9facf2586ebc7969453cfca8231654728249112&projectid=MBCeC2Wz6h&perm=Owner#/page/e4717bd8ef2a4119aa828dabbffe95bd)
 - [Trello](https://trello.com/b/68hPbmTu/cipher)
 
-### 🎨 Prototipo melhorado
+### 🎨 Prototipo Atualizado
 
 - [Figma](https://www.figma.com/file/zVPSOZsfrl4ip9RSEVjt9N/cifra-de-cesar?node-id=0%3A1&t=rGhzQWuo3mfNUuDY-1)
 

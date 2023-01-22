@@ -41,7 +41,6 @@ function cifrarTexto(e) {
   const resultadoCifra = cipher.encode(offset, string);
   mensagemCifrada.innerText = resultadoCifra;
 }
-cifraButton.addEventListener("click", cifrarTexto);
 
 function decifrarTexto(e) {
   e.preventDefault();
@@ -55,5 +54,5 @@ function decifrarTexto(e) {
   mensagemDecifrada.innerText = resultadoCifra;
 }
 
-
+cifraButton.addEventListener("click", cifrarTexto);
 decifraButton.addEventListener("click", decifrarTexto);
