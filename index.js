@@ -1,52 +1,59 @@
-import {cipher} from './cifra/cipher.js'
+import { cipher } from "./cifra/cipher.js";
 
+const select = document.querySelector(".select");
+const selectDecifrar = document.querySelector("#select-decifrar");
+const mensagemParaCifrar = document.querySelector(".mensagem");
+const cifraButton = document.querySelector(".cifra-button");
+const mensagemCifrada = document.querySelector(".resultado-mensagem");
+const mensagemDeErro = document.querySelector(".mensagem-de-erro");
+const mensagemDeErroDecifrar = document.querySelector(".mensagem-de-erro-decifrar")
+const mensagemParaDecifrar = document.querySelector(".decifrar-mensagem");
+const mensagemDecifrada = document.querySelector(".resultado-decifra");
+const decifraButton = document.querySelector(".button-decifrar");
 
-const select = document.querySelector("#select");
-const textMessage = document.querySelector(".textarea")
-const encryptionButton = document.querySelector(".encryption-button")
-
-const numberOption = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  23, 24, 25, 26,
+const numberOption = ["Offset", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
 ];
 
-numberOption.forEach((item)=>{
- const option = new Option(item,item);
+numberOption.forEach((item) => {
+  const option = new Option(item, item);
   select.options[select.options.length] = option;
-})
+});
 
-cipher.encode(1,"GATINHO");
+numberOption.forEach((el) => {
+  const option = new Option(el, el);
+  selectDecifrar.options[selectDecifrar.options.length] = option;
+});
 
-
-function encryptedMessage(){
-  if(textMessage.value == ''){
-    return;
-  }
-  const string = textMessage.value;
-  const offset = select.value
-  console.log(select.value);
+function erro() {
+  mensagemDeErro.innerHTML = ""
+  mensagemDeErroDecifrar.innerHTML = ""
 }
 
-encryptionButton.addEventListener('click',encryptedMessage )
+function cifrarTexto(e) {
+  e.preventDefault();
+  if (mensagemParaCifrar.value == "" || select.value == "Offset") {
+    mensagemDeErro.innerHTML = "Por favor preencha os campos Mensagem ou Offset"
+    return setTimeout((erro), 2000)
+  }
+  const string = mensagemParaCifrar.value;
+  const offset = Number(select.value);
+  const resultadoCifra = cipher.encode(offset, string);
+  mensagemCifrada.innerText = resultadoCifra;
+}
+cifraButton.addEventListener("click", cifrarTexto);
 
-// const botaoCodificar = document.getElementById("codi-mensagem");
-// function codMensagem(evt) {
-//     evt.preventDefault();
-//     const string = document.getElementById("mensagem-secreta").value;
-//     const offset = parseInt(document.getElementById("posicoes-deslocamento").value);
-//     const codiFicando = cipher.encode(offset, string);
-//     document.getElementById("mensagem-cifrada").innerHTML = codiFicando;
-// }
-// botaoCodificar.addEventListener('click', codMensagem);
+function decifrarTexto(e) {
+  e.preventDefault();
+  if (mensagemParaDecifrar.value == "") {
+    mensagemDeErroDecifrar.innerHTML = "Por favor preencha os campos Mensagem ou Offset"
+    return setTimeout((erro), 2000)
+  }
+  const stringDecifrar = mensagemParaDecifrar.value;
+  const offsetDecifrar = Number(selectDecifrar.value);
+  const resultadoCifra = cipher.decode(offsetDecifrar, stringDecifrar);
+  mensagemDecifrada.innerText = resultadoCifra;
+}
 
-// const botaoDescodificar = document.getElementById("descodi-mensagem");
-// function descMensagem(evt) {
-//     evt.preventDefault();
-//     const string = document.getElementById("mensagem-codificada").value;
-//     const offset = parseInt(document.getElementById("inverter-deslocamento").value);
-//     const descoDificando = cipher.decode(offset, string);
-//     document.getElementById("mensagem-descifrada").innerHTML = descoDificando;
-// }
-// botaoDescodificar.addEventListener('click', descMensagem);
 
-// document.getElementById("limpar").addEventListener("click", () => {window.location.reload()});
+decifraButton.addEventListener("click", decifrarTexto);

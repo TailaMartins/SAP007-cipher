@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width" />
   <meta name="description" content="A cifra de cesar é umas das mais simples tecnicas de criptografia">
   <title>Cifra de César</title>
-  <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,38 +37,36 @@
   <main id="cifrar" class="cifrar">
     <div class="container container-cifrar">
       <div>
-        <div class="container-offset">
+        <form class="container-offset">
           <label class="container-texto">Escolha seu deslocamento:</label>
-          <select>
-            <option>Offset</option>
-            <option>1</option>
+          <select class="select">
           </select>
-        </div>
+        </form>
         <label class="container-texto">Mensagem:</label>
-        <textarea class="container-mensagem" required></textarea>
-        <textarea class="container-mensagem" readonly></textarea>
+        <p class="mensagem-de-erro"></p>
+        <textarea class="container-mensagem mensagem"></textarea>
+        <textarea class="container-mensagem resultado-mensagem" readonly></textarea>
       </div>
       <div class="container-button">
-        <button class="button">Cifrar</button>
+        <button class="button cifra-button">Cifrar</button>
       </div>
     </div>
   </main>
   <section id="decifrar" class="decifrar">
     <div class="container container-decifrar">
       <div>
-        <div class="container-offset">
+        <form class="container-offset">
           <label class="container-texto">Escolha seu deslocamento:</label>
-          <select>
-            <option>Offset</option>
-            <option>1</option>
+          <select id="select-decifrar">
           </select>
-        </div>
+        </form>
         <label class="container-texto">Mensagem:</label>
-        <textarea class="container-mensagem" required></textarea>
-        <textarea class="container-mensagem" readonly></textarea>
+        <p class="mensagem-de-erro-decifrar"></p>
+        <textarea class="container-mensagem decifrar-mensagem" required></textarea>
+        <textarea class="container-mensagem resultado-decifra" readonly></textarea>
       </div>
-      <div class="descifrar-button">
-        <button class="button-descifrar">Descifrar</button>
+      <div class="decifrar-button">
+        <button class="button button-decifrar">Decifrar</button>
       </div>
     </div>
   </section>
